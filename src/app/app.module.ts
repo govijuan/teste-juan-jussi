@@ -5,10 +5,11 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 
 import { AppComponent } from './app.component';
+import { topBarComponent } from './components/component.navbar-top'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, topBarComponent
   ],
   imports: [
     BrowserModule,
