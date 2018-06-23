@@ -6,16 +6,18 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
 
 import { AppComponent } from './app.component';
 import { topBarComponent } from './components/component.navbar-top'
+import { homeTopBannerComponent } from './components/component.home-top-banner';
+import { selGeladeidasComponent } from './components/component.selecao-geladeiras'
 
 @NgModule({
   declarations: [
-    AppComponent, topBarComponent
+    AppComponent, topBarComponent, homeTopBannerComponent, selGeladeidasComponent
   ],
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
-    PopoverModule.forRoot()
+    PopoverModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

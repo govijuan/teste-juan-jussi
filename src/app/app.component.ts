@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
 import { topBarComponent } from './components/component.navbar-top';
+import { homeTopBannerComponent } from './components/component.home-top-banner';
+import { selGeladeidasComponent } from './components/component.selecao-geladeiras';
 
 
 @Component({
@@ -8,5 +11,5 @@ import { topBarComponent } from './components/component.navbar-top';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  
 }
