@@ -2,46 +2,47 @@
   padding: 45px 0;
   background-color: #e6e6e6;
   display: flex;
-  .b-f-article{
-    padding: 15px;
-    background-color: white;
-    .b-f-img-container{
+  
+  
+}
+.b-f-article{
+  padding: 15px;
+  background-color: white;
+  .b-f-img-container{
+    width: 100%;
+    img{
       width: 100%;
-      img{
-        width: 100%;
-        display: block;
-      }
-    }
-    .b-f-article-name{
-      font-size: 16px;
-      font-weight: 500;
-    }
-    .b-f-product-ref{
-      color: #747474;
-    }
-    .b-f-product-price-info{
-      margin: 30px 0 0;
-    }
-    .b-f-list-price, .b-f-pagamento-a-vista, .b-f-pagamento-vezes{
-      color: #747474
-    }
-    .b-f-price{
-      font-size: 28px;
-      font-weight: 600;
-    }
-    .btn-add-to-cart{
-      margin: 30px 0 0;
-      background-color: #ffc62d;
-      width: 100%;
-      text-transform: uppercase;
-      font-weight: 500;
-      &:hover, &:active{
-        background-color: #ffb901;
-        color: #454545;
-      }
+      display: block;
     }
   }
-  
+  .b-f-article-name{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .b-f-product-ref{
+    color: #747474;
+  }
+  .b-f-product-price-info{
+    margin: 30px 0 0;
+  }
+  .b-f-list-price, .b-f-pagamento-a-vista, .b-f-pagamento-vezes{
+    color: #747474
+  }
+  .b-f-price{
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .btn-add-to-cart{
+    margin: 30px 0 0;
+    background-color: #ffc62d;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover, &:active{
+      background-color: #ffb901;
+      color: #454545;
+    }
+  }
 }
 .b-f-item-wrap{
   &:first-child{
@@ -59,4 +60,8 @@
           font-weight: 600;
         }
       }
+}
+.b-f-mais-vendidos-section{
+  padding: 45px 0 90px;
+  background-color: white
 }

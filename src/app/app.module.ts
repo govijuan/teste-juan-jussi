@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { topBarComponent } from './components/component.navbar-top'
@@ -15,6 +16,7 @@ import { selGeladeidasComponent } from './components/component.selecao-geladeira
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
     PopoverModule.forRoot(),
