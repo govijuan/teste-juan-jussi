@@ -10,15 +10,18 @@ import { ProductsService } from '../service.products';
 
 export class selGeladeidasComponent {
   products = [];
+  selProducts = [];
   constructor(private _productsService: ProductsService){}
   ngOnInit(){
     this._productsService.getProducts()
     .subscribe(
       (resProductsData) => {
         this.products = resProductsData.products;
+        for(let i =0; i < 4; i++){
+          this.selProducts.push(resProductsData.products[i]);
+        }
       },
-      error => alert(error),
-      () => console.log(JSON.stringify(this.products));
+      error => alert(error)
     )
   }
 }

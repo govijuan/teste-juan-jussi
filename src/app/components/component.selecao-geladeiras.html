@@ -4,74 +4,20 @@
       <h2>Seleção de <span>Geladeiras</span></h2>
     </div>
     <div class="row">
-      <article class="col-md-3 b-f-item-wrap">
+      <article *ngFor="let selProduct of selProducts" class="col-md-3 b-f-item-wrap" id="{{selProduct.id}}">
         <div class="b-f-article">
           <div class="b-f-img-container">
-            <img src="assets/images/product-01-imagem-1000X1000.jpg" alt="">
+            <img src="assets/images/{{selProduct.items[0].images[1].imageUrl}}" alt="selProduct.items[0].images[1].imageText">
           </div>
-          <div class="b-f-article-name">Geladeira Brastemp Ative! Inverse Frost Free All Black 422 Litros</div>
-          <div class="b-f-product-ref">CF676AR</div>
-          <div class="b-f-product-price-info">
+          <div class="b-f-article-name">{{selProduct.productName}}</div>
+          <div class="b-f-product-ref">{{selProduct.modelName}}</div>
+          <div class="b-f-product-price-info" *ngFor="let selItem of selProduct.items">
             <div class="b-f-list-price">
-              De: R$ 2.219,00. Por:
+              De: {{selItem.ListPrice | currency: 'BRL' }}. Por:
             </div>
-            <div class="b-f-price">R$ 2.121,00</div>
+            <div class="b-f-price">{{selItem.Price | currency: 'BRL' }}</div>
             <div class="b-f-pagamento-a-vista">à vista no boleto bancário</div>
-            <div class="b-f-pagamento-vezes">ou até 12x de R$ 528,06</div>
-            <button class="btn btn-add-to-cart">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </article>
-      <article class="col-md-3 b-f-item-wrap">
-        <div class="b-f-article">
-          <div class="b-f-img-container">
-            <img src="assets/images/product-01-imagem-1000X1000.jpg" alt="">
-          </div>
-          <div class="b-f-article-name">Geladeira Brastemp Ative! Inverse Frost Free All Black 422 Litros</div>
-          <div class="b-f-product-ref">CF676AR</div>
-          <div class="b-f-product-price-info">
-            <div class="b-f-list-price">
-              De: R$ 2.219,00. Por:
-            </div>
-            <div class="b-f-price">R$ 2.121,00</div>
-            <div class="b-f-pagamento-a-vista">à vista no boleto bancário</div>
-            <div class="b-f-pagamento-vezes">ou até 12x de R$ 528,06</div>
-            <button class="btn btn-add-to-cart">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </article>
-      <article class="col-md-3 b-f-item-wrap">
-        <div class="b-f-article">
-          <div class="b-f-img-container">
-            <img src="assets/images/product-01-imagem-1000X1000.jpg" alt="">
-          </div>
-          <div class="b-f-article-name">Geladeira Brastemp Ative! Inverse Frost Free All Black 422 Litros</div>
-          <div class="b-f-product-ref">CF676AR</div>
-          <div class="b-f-product-price-info">
-            <div class="b-f-list-price">
-              De: R$ 2.219,00. Por:
-            </div>
-            <div class="b-f-price">R$ 2.121,00</div>
-            <div class="b-f-pagamento-a-vista">à vista no boleto bancário</div>
-            <div class="b-f-pagamento-vezes">ou até 12x de R$ 528,06</div>
-            <button class="btn btn-add-to-cart">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </article>
-      <article class="col-md-3 b-f-item-wrap">
-        <div class="b-f-article">
-          <div class="b-f-img-container">
-            <img src="assets/images/product-01-imagem-1000X1000.jpg" alt="">
-          </div>
-          <div class="b-f-article-name">Geladeira Brastemp Ative! Inverse Frost Free All Black 422 Litros</div>
-          <div class="b-f-product-ref">CF676AR</div>
-          <div class="b-f-product-price-info">
-            <div class="b-f-list-price">
-              De: R$ 2.219,00. Por:
-            </div>
-            <div class="b-f-price">R$ 2.121,00</div>
-            <div class="b-f-pagamento-a-vista">à vista no boleto bancário</div>
-            <div class="b-f-pagamento-vezes">ou até 12x de R$ 528,06</div>
+            <div class="b-f-pagamento-vezes">ou até 12x de {{ selItem.Price | divideIn: 12 | currency: 'BRL'}}</div>
             <button class="btn btn-add-to-cart">Adicionar ao Carrinho</button>
           </div>
         </div>
@@ -88,17 +34,17 @@
       <article *ngFor="let product of products" class="col-md-3 b-f-item-wrap" id="{{product.id}}">
         <div class="b-f-article">
           <div class="b-f-img-container">
-            <img src="assets/images/product-01-imagem-1000X1000.jpg" alt="">
+            <img src="assets/images/{{product.items[0].images[1].imageUrl}}" alt="{{product.items[0].images[1].imageText}}">
           </div>
-          <div class="b-f-article-name">Geladeira Brastemp Ative! Inverse Frost Free All Black 422 Litros</div>
-          <div class="b-f-product-ref">CF676AR</div>
-          <div class="b-f-product-price-info">
+          <div class="b-f-article-name">{{product.productName}}</div>
+          <div class="b-f-product-ref">{{product.modelName}}</div>
+          <div class="b-f-product-price-info" *ngFor="let item of product.items" >
             <div class="b-f-list-price">
-              De: R$ 2.219,00. Por:
+              De: {{ item.ListPrice | currency: 'BRL' }}. Por:
             </div>
-            <div class="b-f-price">R$ 2.121,00</div>
+            <div class="b-f-price">{{item.Price | currency: 'BRL' }}</div>
             <div class="b-f-pagamento-a-vista">à vista no boleto bancário</div>
-            <div class="b-f-pagamento-vezes">ou até 12x de R$ 528,06</div>
+            <div class="b-f-pagamento-vezes">ou até 12x de {{ item.Price | divideIn: 12 | currency: 'BRL' }}</div>
             <button class="btn btn-add-to-cart">Adicionar ao Carrinho</button>
           </div>
         </div>
